@@ -1,0 +1,484 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.2s;
+    font-size: 17px;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    color: #B99671;
+    transform: scale(1.1);
+}
+
+nav select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero_img.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: #fff; 
+    position: relative; 
+    padding: 0; 
+    margin: 0; 
+}
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    position: relative; 
+    z-index: 2; 
+    padding: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative; 
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color:#B99671;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+    position: relative; 
+    z-index: 2; 
+    padding: 20px;
+}
+
+.hero .btn:hover {
+    border: 3px solid black;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Features Grid */
+#features {
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden; 
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background: url('features_img.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5; 
+    z-index: 0; 
+    width: 100%;
+}
+
+
+.container {
+    position: relative;
+    z-index: 1; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.features-slider {
+    width: 100%;
+    position: relative;
+}
+
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap; 
+    transition: transform 0.5s ease;
+}
+
+
+.swiper-slide {
+    flex: 0 0 auto; 
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+}
+
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em; 
+    cursor: pointer;
+    color: #c69866; 
+    user-select: none; 
+    z-index: 2;
+}
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .feature {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .swiper-slide {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    .prev-slide, .next-slide {
+        font-size: 1.5em; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.1em; 
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 0.85em; 
+        line-height: 1.4em;
+    }
+
+    .feature {
+        padding: 10px; 
+        max-width: 100%; 
+    }
+
+    .prev-slide, .next-slide {
+        font-size: 1.2em;
+    }
+}
+
+/* about us */
+#about-us {
+    position: relative;
+    padding: 60px 20px; 
+    color: #333; 
+    background-color: #f4f4f4; 
+    overflow: hidden;
+}
+
+
+#about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('core_values.png') no-repeat center center; 
+    background-size: cover; 
+    opacity: 0.4; 
+    z-index: 0; 
+}
+
+/* Content Container */
+#about-us .container {
+    position: relative;
+    z-index: 1; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; 
+}
+
+
+.mission-vision h2 {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    color: black;
+}
+
+.mission-vision p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.core-values {
+    margin: 40px 0;
+}
+
+.core-values h3 {
+    font-size: 2em; 
+    margin-bottom: 20px;
+    color: black; 
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.value {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 280px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .values-list {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .value {
+        max-width: 100%; 
+    }
+}
+
+/* Case Studies Section */
+#case-studies {
+    position: relative;
+    padding: 60px 20px;
+    color: #333; 
+    overflow: hidden;
+}
+
+#case-studies::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('case_studies.png') no-repeat center center; 
+    background-size: cover;
+    opacity: 0.4; 
+    z-index: 0; 
+}
+
+/* Content Container */
+#case-studies {
+    position: relative;
+    padding: 60px 20px;
+    color: #333;
+    overflow: hidden;
+    background-color: #f7f7f7; /* Light background for contrast */
+}
+
+#case-studies::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('case_studies.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Slightly reduce opacity for subtlety */
+    z-index: 0;
+}
+
+/* Content Container */
+#case-studies .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.case-studies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid layout for responsiveness */
+    gap: 40px; /* Increase gap for better spacing */
+    margin-top: 40px; /* Add margin for spacing */
+}
+
+.case-study {
+    background-color: #fff;
+    border-radius: 12px; /* Slightly rounded corners */
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.case-study:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.case-study h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Increased margin for spacing */
+    color: #222;
+}
+
+.case-study p {
+    font-size: 1rem;
+    margin-bottom: 10px; /* Consistent spacing */
+    color: #555; /* Slightly lighter color for text */
+}
+
+@media (max-width: 768px) {
+    #case-studies {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .case-study {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+
+/* Contact Form */
+#contact {
+    background-color:#B99671; 
+    color: #fff; 
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
